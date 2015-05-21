@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D0283ABD-0908-4738-86BB-77548F9C9E09}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Media_Database.My.MyApplication</StartupObject>
+    <RootNamespace>Media_Database</RootNamespace>
+    <AssemblyName>Media Database</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Captinchaos\Documents\Media Database Project\build\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>11</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Media Database.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Media Database.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C124B1724481613CBD56F2CFF9B8BFC3D8E695DC</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Media Database_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Akka">
+      <HintPath>..\packages\Akka.1.0.0\lib\net45\Akka.dll</HintPath>
+    </Reference>
+    <Reference Include="Akka.TestKit">
+      <HintPath>..\packages\Akka.TestKit.1.0.0\lib\net45\Akka.TestKit.dll</HintPath>
+    </Reference>
+    <Reference Include="Akka.TestKit.VsTest">
+      <HintPath>..\packages\Akka.TestKit.VsTest.1.0.0\lib\net45\Akka.TestKit.VsTest.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoCleaner">
+      <HintPath>..\packages\AutoCleaner.1.0.0.0\lib\net35\AutoCleaner.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="LightBDD">
+      <HintPath>..\packages\LightBDD.Core.1.6.1.0\lib\net40\LightBDD.dll</HintPath>
+    </Reference>
+    <Reference Include="LightBDD.MsTest">
+      <HintPath>..\packages\LightBDD.MsTest.1.6.1.0\lib\net40\LightBDD.MsTest.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\MediaDataBaseDataSet.vb">
+      <DependentUpon>MediaDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addBook.Designer.vb">
+      <DependentUpon>addBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addMovies.Designer.vb">
+      <DependentUpon>addMovies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addMovies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addGames.Designer.vb">
+      <DependentUpon>addGames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addGames.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editGames.Designer.vb">
+      <DependentUpon>editGames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editGames.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editMusic.Designer.vb">
+      <DependentUpon>editMusic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editMusic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editBooks.Designer.vb">
+      <DependentUpon>editBooks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editBooks.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editMovies.Designer.vb">
+      <DependentUpon>editMovies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Edit Folder\editMovies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Media Database Project\viewBooks.Designer.vb">
+      <DependentUpon>viewBooks.vb</DependentUpon>
+      <Link>Forms\Data Folders\View Folder\viewBooks.Designer.vb</Link>
+    </Compile>
+    <Compile Include="..\..\..\..\..\..\..\..\Documents\Media Database Project\viewBooks.vb">
+      <Link>Forms\Data Folders\View Folder\viewBooks.vb</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\View Folder\viewGames.Designer.vb">
+      <DependentUpon>viewGames.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\View Folder\viewGames.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\View Folder\viewMovies.Designer.vb">
+      <DependentUpon>viewMovies.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\View Folder\viewMovies.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\View Folder\viewMusic.Designer.vb">
+      <DependentUpon>viewMusic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\View Folder\viewMusic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\aboutPage.Designer.vb">
+      <DependentUpon>aboutPage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\aboutPage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\howTo.Designer.vb">
+      <DependentUpon>howTo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\howTo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord1.Designer.vb">
+      <DependentUpon>AddRecord1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord2.Designer.vb">
+      <DependentUpon>AddRecord2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord3.Designer.vb">
+      <DependentUpon>AddRecord3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord4.Designer.vb">
+      <DependentUpon>AddRecord4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord5.Designer.vb">
+      <DependentUpon>AddRecord5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\AddRecord5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord2.Designer.vb">
+      <DependentUpon>DeleteRecord2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord3.Designer.vb">
+      <DependentUpon>DeleteRecord3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord4.Designer.vb">
+      <DependentUpon>DeleteRecord4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord1.Designer.vb">
+      <DependentUpon>EditRecord1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord1.Designer.vb">
+      <DependentUpon>DeleteRecord1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\DeleteRecord1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord2.Designer.vb">
+      <DependentUpon>EditRecord2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord3.Designer.vb">
+      <DependentUpon>EditRecord3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord3.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord4.Designer.vb">
+      <DependentUpon>EditRecord4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord5.Designer.vb">
+      <DependentUpon>EditRecord5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\How To\EditRecord5.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\License.Designer.vb">
+      <DependentUpon>License.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\License.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\Settings.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\suggestionBox.Designer.vb">
+      <DependentUpon>suggestionBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\suggestionBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Extras\Extras.Designer.vb">
+      <DependentUpon>Extras.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Extras\Extras.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash Folder\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Splash Folder\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addMusic.Designer.vb">
+      <DependentUpon>addMusic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Data Folders\Add Folder\addMusic.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Database\MediaDataBaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MediaDataBaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\Data Folders\Add Folder\addBook.resx">
+      <DependentUpon>addBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Add Folder\addGames.resx">
+      <DependentUpon>addGames.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Add Folder\addMovies.resx">
+      <DependentUpon>addMovies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Edit Folder\editGames.resx">
+      <DependentUpon>editGames.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Edit Folder\editMovies.resx">
+      <DependentUpon>editMovies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Edit Folder\editMusic.resx">
+      <DependentUpon>editMusic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Edit Folder\editBooks.resx">
+      <DependentUpon>editBooks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\..\..\..\..\..\..\..\Documents\Media Database Project\viewBooks.resx">
+      <DependentUpon>viewBooks.vb</DependentUpon>
+      <Link>Forms\Data Folders\View Folder\viewBooks.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\View Folder\viewGames.resx">
+      <DependentUpon>viewGames.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\View Folder\viewMovies.resx">
+      <DependentUpon>viewMovies.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\View Folder\viewMusic.resx">
+      <DependentUpon>viewMusic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\aboutPage.resx">
+      <DependentUpon>aboutPage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\howTo.resx">
+      <DependentUpon>howTo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\AddRecord1.resx">
+      <DependentUpon>AddRecord1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\AddRecord2.resx">
+      <DependentUpon>AddRecord2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\AddRecord3.resx">
+      <DependentUpon>AddRecord3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\AddRecord4.resx">
+      <DependentUpon>AddRecord4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\AddRecord5.resx">
+      <DependentUpon>AddRecord5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\DeleteRecord1.resx">
+      <DependentUpon>DeleteRecord1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\DeleteRecord2.resx">
+      <DependentUpon>DeleteRecord2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\DeleteRecord3.resx">
+      <DependentUpon>DeleteRecord3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\DeleteRecord4.resx">
+      <DependentUpon>DeleteRecord4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\EditRecord1.resx">
+      <DependentUpon>EditRecord1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\EditRecord2.resx">
+      <DependentUpon>EditRecord2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\EditRecord3.resx">
+      <DependentUpon>EditRecord3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\EditRecord4.resx">
+      <DependentUpon>EditRecord4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\How To\EditRecord5.resx">
+      <DependentUpon>EditRecord5.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\License.resx">
+      <DependentUpon>License.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\suggestionBox.resx">
+      <DependentUpon>suggestionBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Extras\Extras.resx">
+      <DependentUpon>Extras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Splash Folder\MainForm.resx">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Data Folders\Add Folder\addMusic.resx">
+      <DependentUpon>addMusic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Database\MediaDataBaseDataSet.xsc">
+      <DependentUpon>MediaDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Database\MediaDataBaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MediaDataBaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Database\MediaDataBaseDataSet.xss">
+      <DependentUpon>MediaDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MediaDatabaseTemporaryKey.pfx" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AddRecprdClickBook.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordClickEdit.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordClickAdd.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordAddData.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordClickAddBook.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordClickRemoveBook.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordIndicateRow.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordEditCells.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddRecordClickSaveChanges.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\nugetexample.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

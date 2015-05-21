@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>AutoCleaner</name>
+    </assembly>
+    <members>
+        <member name="T:AutoCleaner.HierarchyOptions">
+            <summary>
+            Hierarchy options controls which members would be cleaned, depending on which type in type hierarchy they belongs to.
+            
+            Hierarchy analysis is based on a type that is passed to StateCleaner.ResetInstance() method.
+            
+            If instance is passed as a base type, it is possible to specify if declared, inherited or descendant members should be cleaned.
+            It is possible also to use any combination of those flags together.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.HierarchyOptions.Declared">
+            <summary>
+            Includes all members declared in specified type.
+            
+            See example:
+            <code>
+                class Base { int _field; }
+                class Current: Base { int _field2; }
+                class Child: Current { int _field3; }
+            
+                Current c = new Child();
+            
+                StateCleaner.ResetInstance(c, HierarchyOptions.Declared, VisibilityOptions.All);
+            </code>
+            
+            Because instance 'c' has been passed as Current type and Declared option is used, only _field2 would be cleaned.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.HierarchyOptions.Descendant">
+            <summary>
+            Includes all members declared in child types of specified type.
+            Applicable only, if a base type is used to pass instance to StateCleaner.
+            
+            See example:
+            <code>
+                class Base { int _field; }
+                class Current: Base { int _field2; }
+                class Child: Current { int _field3; }
+            
+                Current c = new Child();
+            
+                StateCleaner.ResetInstance(c, HierarchyOptions.Descendant, VisibilityOptions.All);
+            </code>
+            
+            Because instance 'c' has been passed as Current type and Descendant option is used, only _field3 would be cleaned.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.HierarchyOptions.Inherited">
+            <summary>
+            Includes all members declared in inherited types of specified type.
+            
+            See example:
+            <code>
+                class Base { int _field; }
+                class Current: Base { int _field2; }
+                class Child: Current { int _field3; }
+            
+                Current c = new Child();
+            
+                StateCleaner.ResetInstance(c, HierarchyOptions.Inherited, VisibilityOptions.All);
+            </code>
+            
+            Because instance 'c' has been passed as Current type and Inherited option is used, only _field would be cleaned.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.HierarchyOptions.All">
+            <summary>
+            Includes all members of specified type, no matter if they are declared in base types, specified type or child types.
+            </summary>
+        </member>
+        <member name="T:AutoCleaner.NoAutoCleanAttribute">
+            <summary>
+            Attribute applicable on fields and (auto) properties.
+            If present, StateCleaner will not clean annotated field.
+            </summary>
+        </member>
+        <member name="T:AutoCleaner.ResetOptions">
+            <summary>
+            An additional options controlling behavior of cleaning instance fields/auto-properties.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.ResetOptions.None">
+            <summary>
+            None.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.ResetOptions.IncludeReadOnlyMembers">
+            <summary>
+            Include read-only fields in cleanup. 
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.ResetOptions.OverruleNoAutoClean">
+            <summary>
+            Include fields/properties with NoAutoClean attributes.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.ResetOptions.DoNotDispose">
+            <summary>
+            Do not call Dispose() method on members implementing IDisposable() interface.
+            </summary>
+        </member>
+        <member name="T:AutoCleaner.StateCleaner">
+            <summary>
+            Class allowing to automatically clean state of passed instance.
+            </summary>
+        </member>
+        <member name="M:AutoCleaner.StateCleaner.ResetInstance``1(``0,AutoCleaner.HierarchyOptions,AutoCleaner.VisibilityOptions,AutoCleaner.ResetOptions)">
+            <summary>
+            Resets state of specified instance fields/auto-properties to their defaults (null for classes, default value for structs).
+            If given instance field implements IDisposable interface, it would be disposed before reset.
+            
+            It is possible to control which fields/auto-properties would be cleaned with hierarchy, visibility and reset options.
+            </summary>
+            <typeparam name="T">Target type.</typeparam>
+            <param name="target">Target instance to be reset.</param>
+            <param name="hierarchyOptions">Options controlling which members would be cleaned, depending on which type in type hierarchy they belongs to.</param>
+            <param name="visibilityOptions">Options controlling which members would be cleaned, depending on their visibility flags.</param>
+            <param name="resetOptions">An additional reset options.</param>
+        </member>
+        <member name="T:AutoCleaner.VisibilityOptions">
+            <summary>
+            Visibility options controls which members would be cleaned, depending on their visibility flags.
+            
+            Please note that for AutomaticProperties, the visibility of setter method would be used.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.Public">
+            <summary>
+            Include public members.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.Protected">
+            <summary>
+            Include protected members.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.Private">
+            <summary>
+            Include private members.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.Internal">
+            <summary>
+            Include internal members.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.ProtectedInternal">
+            <summary>
+            Include protected-interna members.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.ProtectedPrivate">
+            <summary>
+            Include protected-private members (Family and Assembly).
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.NonPublic">
+            <summary>
+            Include all non-public members.
+            </summary>
+        </member>
+        <member name="F:AutoCleaner.VisibilityOptions.All">
+            <summary>
+            Include all members.
+            </summary>
+        </member>
+    </members>
+</doc>

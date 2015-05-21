@@ -1,0 +1,160 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+MediaDatabase
+</name>
+</assembly>
+<members>
+<member name="T:Media_Database.MediaDataBaseDataSet.Book_TitleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Film_TitleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Game_TitleDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Music_TracksDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Book_TitleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Film_TitleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Game_TitleRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Music_TracksRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Book_TitleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Film_TitleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Game_TitleRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet.Music_TracksRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.Book_TitleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.Film_TitleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.Game_TitleTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.Music_TracksTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(Media_Database.MediaDataBaseDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(Media_Database.MediaDataBaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(Media_Database.MediaDataBaseDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.UpdateAll(Media_Database.MediaDataBaseDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:Media_Database.MediaDataBaseDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecord_ClickAdd">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordAddData">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordClickAddBook">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordClickEdit">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordClickRemoveBook">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordClickSaveChanges">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordEditCells">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecordIndicateRow">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Media_Database.My.Resources.Resources.AddRecprdClickBook">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:Media_Database.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+</members>
+</doc>
